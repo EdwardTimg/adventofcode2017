@@ -231,11 +231,11 @@
       </method>
     </configuration>
     <configuration name="DayOnePartTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.edward.adventofcode.DayOnePartTwo" />
+      <option name="MAIN_CLASS_NAME" value="DayOnePartTwo" />
       <module name="AdventOfCode2017" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.edward.adventofcode.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
