@@ -23,5 +23,12 @@ public class DayFiveTest {
         assertTrue(dayFive.readInputFile("inputdayfive.txt").size() > 0);
     }
 
+    @Test
+    public void Jumpoffsetchange(){
+        List<Integer> list = new ArrayList<>();
+        list.addAll(Arrays.asList(0, 3, 0, 1, -3));
+        assertTrue(dayFive.Jumpoffsetchange(list) == 10);
+    }
+
 
 }

@@ -12,6 +12,7 @@ public class DayFive {
     public static void main(String[] args) {
         DayFive dayFive = new DayFive();
         System.out.println(dayFive.jump(dayFive.readInputFile("inputdayfive.txt")));
+        System.out.println(dayFive.Jumpoffsetchange(dayFive.readInputFile("inputdayfive.txt")));
     }
 
     public List<Integer> readInputFile(String path){
@@ -32,12 +33,29 @@ public class DayFive {
         int posision = 0;
         int nrjump = 0;
         while (posision < list.size()){
-            int stepsToJump = list.get(posision);
-            int newPosision = posision + (stepsToJump++);
-            list.set(posision, stepsToJump++);
+            int newPosision = posision + (list.get(posision));
+            list.set(posision, list.get(posision)+1);
             posision = newPosision;
             nrjump++;
         }
         return nrjump;
     }
+
+    public int Jumpoffsetchange(List<Integer>list){
+        int posision = 0;
+        int nrjump= 0;
+        while(posision<list.size()){
+            int newPosision = list.get(posision)+ posision;
+            if(list.get(posision)<3){
+                list.set(posision, list.get(posision)+1);
+            }else{
+                list.set(posision, list.get(posision)-1);
+            }
+            posision = newPosision;
+            nrjump ++;
+        }
+        return nrjump;
+    }
+
+
 }
